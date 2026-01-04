@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee & AI Time - AI Master Class</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero-section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .price-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .price {
+            font-size: 4em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .price-label {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2.2em;
+            margin-bottom: 5px;
+        }
+
+        .subtitle-tagline {
+            font-size: 1.3em;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.6em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+
+        .payment-form {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.6);
+        }
+
+        .success-message {
+            display: none;
+            background: #4caf50;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .success-message h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .highlight-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .hero-section, .section {
+                padding: 30px 20px;
+            }
+
+            .price {
+                font-size: 3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Coffee & AI Time</h1>
+            <p class="subtitle">Master AI Tools & Transform Your Workflow</p>
+            <p style="font-size: 1.2em;">Live Online Master Class via Zoom</p>
+        </header>
+
+        <div class="hero-section">
+            <h2>Learn Practical AI Skills</h2>
+            <p class="subtitle-tagline">that you can actually use</p>
+            <p style="font-size: 1.2em; line-height: 1.8; margin-top: 20px;">
+                Join us for an intensive, hands-on master class where you will learn to leverage the most powerful AI platforms available today. Work side-by-side with an IT technician with 20 years of experience who will guide you through practical applications and real-world solutions. Whether you are a business professional, creative, or entrepreneur, you will discover practical techniques to save time, boost productivity, and unlock new possibilities with AI - all while staying legally compliant.
+            </p>
+
+            <div class="price-box">
+                <p class="price-label">Master Class Investment</p>
+                <div class="price">$499.99</div>
+                <p style="font-size: 1.1em;">One-time payment - Lifetime access to materials</p>
+                <p style="font-size: 0.95em; margin-top: 15px; opacity: 0.9;">Includes live master class, recordings, and working artifact</p>
+            </div>
+
+            <div style="background: #f8f9fa; border: 3px solid #667eea; border-radius: 15px; padding: 30px; margin: 30px 0;">
+                <h3 style="color: #667eea; text-align: center; margin-top: 0; font-size: 1.8em;">Premium Coaching Package</h3>
+                <p style="text-align: center; font-size: 1.3em; margin: 20px 0; font-weight: 600; color: #333;">Two 45-Minute 1-on-1 Sessions with Professional Technician</p>
+                <p style="text-align: center; font-size: 2.5em; font-weight: bold; color: #667eea; margin: 20px 0;">$1,500</p>
+                <div style="background: white; padding: 25px; border-radius: 10px; margin-top: 20px;">
+                    <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 15px;"><strong>Perfect for those who want:</strong></p>
+                    <ul style="font-size: 1.05em; line-height: 1.9;">
+                        <li>Personalized guidance on complex projects</li>
+                        <li>Custom AI workflow development for your business</li>
+                        <li>Technical troubleshooting and optimization</li>
+                        <li>Strategic implementation planning</li>
+                        <li>Direct access to 20 years of IT expertise</li>
+                    </ul>
+                    <p style="text-align: center; margin-top: 25px; padding-top: 20px; border-top: 2px solid #eee; font-size: 1.15em; color: #667eea; font-weight: 600;">
+                        Total Value with Add-On: $1,999.99
+                    </p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>What Makes This Different:</strong> No fluff, no theory. Just practical, actionable skills you can use immediately. Learn how to use both FREE and paid AI platforms effectively and legally.
+            </div>
+
+            <div class="highlight-box" style="background: #d4edda; border-left: 5px solid #28a745;">
+                <strong>Save Time & Money:</strong> We have done the research for you! No need to waste months testing dozens of AI tools or spending hundreds on subscriptions you do not need. We have taken the guesswork out and show you exactly which tools to use for each task - saving you time, money, and frustration.
+            </div>
+
+            <div class="highlight-box" style="background: #e8f4f8; border-left: 5px solid #17a2b8;">
+                <strong>Walk Away with Results:</strong> You will create a working artifact after your first session! Whether it is a professional website, business brand materials, technical consultation on your project, a comprehensive business plan, or custom AI workflows - you will leave with tangible results you can use immediately.
+            </div>
+        </div>
+
+        <div class="section" style="background: #fff3cd; border: 3px solid #ffc107;">
+            <h2 style="color: #856404; text-align: center;">Already Completed the Master Class?</h2>
+            <p style="font-size: 1.2em; text-align: center; margin: 20px 0; line-height: 1.8;">
+                Upgrade to Premium Coaching and save $201 with our exclusive alumni discount!
+            </p>
+            <div style="text-align: center;">
+                <a href="#upgrade" style="display: inline-block; background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 15px 40px; border-radius: 50px; font-size: 1.2em; font-weight: bold; text-decoration: none; box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                    View Alumni Upgrade Options →
+                </a>
+            </div>
+            <p style="text-align: center; margin-top: 15px; font-size: 0.95em; color: #856404;">
+                Save $201 on Premium Coaching Sessions
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>About Your Instructor</h2>
+            <div style="display: grid; grid-template-columns: 200px 1fr; gap: 30px; align-items: center; margin-top: 20px;">
+                <div style="width: 200px; height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 4em;">
+                    👤
+                </div>
+                <div>
+                    <h3 style="margin-top: 0; color: #667eea;">[Your Name]</h3>
+                    <p style="font-size: 1.15em; line-height: 1.8;">
+                        With over 20 years of IT experience, I have helped countless businesses and professionals navigate the rapidly evolving technology landscape. From enterprise systems to cutting-edge AI implementations, I have seen technology transform industries - and now I am here to help you harness that power.
+                    </p>
+                    <p style="font-size: 1.1em; line-height: 1.8; margin-top: 15px;">
+                        I created Coffee & AI Time because I saw too many people overwhelmed by AI tools, unsure where to start, and wasting money on subscriptions they did not need. My mission is simple: teach you practical AI skills that actually work in the real world, without the technical jargon or empty promises.
+                    </p>
+                    <p style="font-size: 1.1em; line-height: 1.8; margin-top: 15px;">
+                        <strong>My approach:</strong> Hands-on, practical, and results-driven. You will not just learn theory - you will build something tangible in your first session that you can use immediately in your business or life.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div style="margin-top: 30px;">
+                <h3>Do I need technical experience to take this class?</h3>
+                <p style="font-size: 1.1em; line-height: 1.8; margin-top: 10px;">
+                    Absolutely not! This class is designed for people with zero technical background. If you can use email and browse the web, you can master these AI tools. I will guide you step-by-step through everything.
+                </p>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3>What if I miss a live session?</h3>
+                <p style="font-size: 1.1em; line-height: 1.8; margin-top: 10px;">
+                    No problem! All sessions are recorded and you will have lifetime access to the recordings. You can watch them anytime at your own pace. However, attending live gives you the benefit of asking questions in real-time and getting personalized help.
+                </p>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3>Are the sessions recorded?</h3>
+                <p style="font-size: 1.1em; line-height: 1.8; margin-top: 10px;">
+                    Yes! Every session is recorded in high quality. You will receive access to all recordings immediately after each session, and you can keep them forever. Review the material as many times as you need.
+                </p>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3>How long do I have access to the course materials?</h3>
+                <p style="font-size: 1.1em; line-height: 1.8; margin-top: 10px;">
+                    Lifetime access! Once you enroll, you will have permanent access to all course materials, recordings, templates, and resources. Plus, you will receive any future updates at no additional cost.
+                </p>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3>What is your refund policy?</h3>
+                <p style="font-size: 1.1em; line-height: 1.8; margin-top: 10px;">
+                    I stand behind this course 100%. If you attend the first session and feel this is not right for you, I will refund your investment in full within 7 days - no questions asked. Your success and satisfaction are my top priorities.
+                </p>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3>Do I need to purchase any AI subscriptions before the class?</h3>
+                <p style="font-size: 1.1em; line-height: 1.8; margin-top: 10px;">
+                    No! We will start with free versions of all tools. I will show you what you can accomplish without spending a dime, and then help you decide which paid subscriptions (if any) make sense for YOUR specific needs. No wasted money on tools you will not use.
+                </p>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3>How many people will be in the class?</h3>
+                <p style="font-size: 1.1em; line-height: 1.8; margin-top: 10px;">
+                    I keep class sizes intentionally small - maximum 15 participants per session. This ensures everyone gets personalized attention and I can address your specific questions and use cases.
+                </p>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3>What equipment or software do I need?</h3>
+                <p style="font-size: 1.1em; line-height: 1.8; margin-top: 10px;">
+                    Just a computer or tablet with internet access and Zoom installed. That is it! All the AI tools we will use are web-based, so there is nothing to download or install. I will send you a detailed prep email with simple setup instructions before the first session.
+                </p>
+            </div>
+        </div>
+
+        <div class="section" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); color: white; text-align: center;">
+            <h2 style="color: white; border-bottom: 3px solid white; padding-bottom: 15px;">Limited Availability</h2>
+            <p style="font-size: 1.5em; margin: 25px 0; font-weight: 600;">Next Class Starts: [INSERT DATE]</p>
+            <p style="font-size: 1.3em; margin: 20px 0;">Only 12 Spots Remaining</p>
+            <p style="font-size: 1.1em; margin-top: 15px; opacity: 0.95;">
+                Class sizes are limited to ensure personalized attention and hands-on guidance. Once spots are filled, the next available session will not be until [INSERT NEXT DATE].
+            </p>
+            <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin-top: 25px;">
+                <p style="font-size: 1.2em; margin: 0;"><strong>Early Bird Bonus:</strong> Register today and receive a FREE AI tools comparison guide (Value: $50)</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>What You Will Learn</h2>
+            <p style="font-size: 1.15em; line-height: 1.8; margin-bottom: 25px;">
+                This comprehensive master class covers everything from AI foundations and legal considerations to advanced techniques and real-world applications. You will master multiple AI platforms including Claude, NotebookLM, ChatGPT, and more - learning exactly when and how to use each one for maximum impact.
+            </p>
+            <p style="font-size: 1.1em; color: #667eea; font-weight: 600;">
+                A detailed course outline will be provided upon registration.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>What You Will Be Able to Do After This Class</h2>
+            <ul style="font-size: 1.1em;">
+                <li><strong>Save 10+ hours per week</strong> by automating routine tasks</li>
+                <li><strong>Create professional content</strong> in minutes instead of hours</li>
+                <li><strong>Analyze complex information</strong> and make data-driven decisions faster</li>
+                <li><strong>Generate marketing materials</strong> that actually convert</li>
+                <li><strong>Build custom AI workflows</strong> tailored to your specific needs</li>
+                <li><strong>Stay legally compliant</strong> while using AI in your business</li>
+                <li><strong>Choose the right AI tool</strong> for each specific task</li>
+                <li><strong>Train your team</strong> on effective AI usage</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Secure Payment & Registration</h2>
+            <p style="margin-bottom: 30px; font-size: 1.1em;">Complete your registration below. Once payment is processed, you will receive an email with your Zoom link and access to all course materials.</p>
+
+            <div class="payment-form">
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company/Organization (Optional)</label>
+                        <input type="text" id="company">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="addOn">Premium Coaching Add-On (Optional)</label>
+                        <select id="addOn">
+                            <option value="499.99">Master Class Only - $499.99</option>
+                            <option value="1999.99">Master Class + Premium Coaching (2 x 45-min sessions) - $1,999.99</option>
+                        </select>
+                    </div>
+
+                    <div style="background: #e3f2fd; padding: 20px; border-radius: 10px; margin: 20px 0; text-align: center;">
+                        <p style="font-size: 1.1em; margin-bottom: 10px; color: #666;">Total Investment:</p>
+                        <p id="totalPrice" style="font-size: 2.5em; font-weight: bold; color: #667eea; margin: 0;">$499.99</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardName">Name on Card *</label>
+                        <input type="text" id="cardName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number *</label>
+                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date *</label>
+                            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cvv">CVV *</label>
+                            <input type="text" id="cvv" placeholder="123" maxlength="4" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="billingZip">Billing Zip Code *</label>
+                        <input type="text" id="billingZip" maxlength="10" required>
+                    </div>
+
+                    <div style="margin: 20px 0; padding: 15px; background: #e3f2fd; border-radius: 8px;">
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="checkbox" id="terms" required style="width: auto; margin-right: 10px;">
+                            <span>I agree to the terms and conditions and understand that payment is non-refundable after receiving course materials</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary" id="submitBtn">
+                        Complete Payment - $499.99
+                    </button>
+                </form>
+
+                <div class="success-message" id="successMessage">
+                    <h3>Registration Successful!</h3>
+                    <p style="font-size: 1.2em; margin-top: 15px;">
+                        Thank you for enrolling in Coffee & AI Time! You will receive an email within the next few minutes with your Zoom link and course access details.
+                    </p>
+                    <p style="margin-top: 15px;">Check your spam folder if you do not see it in your inbox.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+            <h2 style="color: white; border-bottom: 3px solid white;">Ready to Transform Your Workflow?</h2>
+            <p style="font-size: 1.3em; margin: 20px 0;">Join hundreds of professionals who have already mastered AI</p>
+            <p style="font-size: 1.1em; opacity: 0.9;">Limited spots available - Live interaction - Lifetime access to materials</p>
+        </div>
+
+        <footer style="background: #2d3748; color: white; padding: 30px 20px; text-align: center; margin-top: 0;">
+            <p style="margin-bottom: 10px; font-size: 0.95em;">© 2025 Coffee & AI Time. All Rights Reserved.</p>
+            <p style="font-size: 0.85em; opacity: 0.8;">All course materials, content, and intellectual property are protected by copyright law.</p>
+            <p style="font-size: 0.85em; opacity: 0.7; margin-top: 15px;">Contact: [Your Email] | Privacy Policy | Terms of Service</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function updateTotal() {
+                var addOn = document.getElementById('addOn').value;
+                var totalPrice = document.getElementById('totalPrice');
+                var submitBtn = document.getElementById('submitBtn');
+                
+                totalPrice.textContent = '$' + parseFloat(addOn).toFixed(2);
+                submitBtn.textContent = 'Complete Payment - $' + parseFloat(addOn).toFixed(2);
+            }
+
+            document.getElementById('addOn').addEventListener('change', updateTotal);
+
+            document.getElementById('cardNumber').addEventListener('input', function(e) {
+                var value = e.target.value.replace(/\s/g, '');
+                var formattedValue = value.match(/.{1,4}/g);
+                if (formattedValue) {
+                    e.target.value = formattedValue.join(' ');
+                } else {
+                    e.target.value = value;
+                }
+            });
+
+            document.getElementById('expiry').addEventListener('input', function(e) {
+                var value = e.target.value.replace(/\D/g, '');
+                if (value.length >= 2) {
+                    value = value.slice(0, 2) + '/' + value.slice(2, 4);
+                }
+                e.target.value = value;
+            });
+
+            document.getElementById('cvv').addEventListener('input', function(e) {
+                e.target.value = e.target.value.replace(/\D/g, '');
+            });
+
+            document.getElementById('registrationForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                var email = document.getElementById('email').value;
+                var terms = document.getElementById('terms').checked;
+                
+                if (!email || !terms) {
+                    alert('Please fill in all required fields and accept the terms.');
+                    return;
+                }
+
+                var registrationData = {
+                    name: document.getElementById('fullName').value,
+                    email: email,
+                    phone: document.getElementById('phone').value,
+                    company: document.getElementById('company').value,
+                    addOn: document.getElementById('addOn').value,
+                    timestamp: new Date().toISOString()
+                };
+
+                document.querySelector('.payment-form form').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+
+                console.log('Registration submitted:', registrationData);
+            });
+        });
+    </script>
+</body>
+</html>
