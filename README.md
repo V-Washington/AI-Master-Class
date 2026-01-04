@@ -1,7 +1,7 @@
-# AI-Master-Class
+# AI-Master-Class-Website
 hands-on master class where you will learn to leverage the most powerful AI platforms available today. Whether you are a business professional, creative, or entrepreneur, you will discover practical techniques to save time, boost productivity, and unlock new possibilities with AI - all while staying legally compliant.
 
-# Coffee & AI Time - Master Class Website
+# Coffee & AI Time - Master Class
 
 A professional landing page and payment system for an AI Master Class that teaches practical AI skills to business professionals, creatives, and entrepreneurs.
 
