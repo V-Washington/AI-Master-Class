@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Coaching Upgrade - Coffee & AI Time</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+        }
+
+        .main-section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .alumni-badge {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #333;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .price-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .price-box {
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .regular-price {
+            background: #f8f9fa;
+            border: 2px solid #ddd;
+            position: relative;
+        }
+
+        .regular-price::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: #dc3545;
+            transform: rotate(-10deg);
+        }
+
+        .alumni-price {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            border: 3px solid #28a745;
+            position: relative;
+        }
+
+        .alumni-price::before {
+            content: 'ALUMNI SPECIAL';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffd700;
+            color: #333;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+
+        .price-amount {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .savings {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #856404;
+        }
+
+        .benefits-list {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .benefits-list h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .benefits-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits-list li {
+            padding: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .benefits-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .testimonial {
+            background: #e8f4f8;
+            border-left: 5px solid #17a2b8;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 5px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            margin-top: 15px;
+            font-weight: 600;
+            color: #667eea;
+            font-style: normal;
+        }
+
+        .form-section {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 25px rgba(40, 167, 69, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(40, 167, 69, 0.6);
+        }
+
+        .success-message {
+            display: none;
+            background: #4caf50;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .success-message h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .price-comparison {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .main-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome Back, Graduate! 🎓</h1>
+            <p class="subtitle">Ready to Take Your AI Skills to the Next Level?</p>
+        </header>
+
+        <div class="main-section">
+            <div style="text-align: center;">
+                <span class="alumni-badge">🌟 ALUMNI EXCLUSIVE OFFER 🌟</span>
+            </div>
+
+            <h2>Premium Coaching Add-On</h2>
+            <p style="font-size: 1.2em; text-align: center; margin-bottom: 30px; line-height: 1.8;">
+                Two 45-Minute 1-on-1 Sessions with Your Professional IT Technician
+            </p>
+
+            <div class="price-comparison">
+                <div class="price-box regular-price">
+                    <p style="font-size: 1.1em; color: #666;">Regular Price</p>
+                    <div class="price-amount" style="color: #999;">$1,500</div>
+                    <p style="color: #666;">New Students</p>
+                </div>
+                <div class="price-box alumni-price">
+                    <p style="font-size: 1.1em;">Your Alumni Price</p>
+                    <div class="price-amount">$1,299</div>
+                    <p>Limited Time Offer</p>
+                </div>
+            </div>
+
+            <div class="savings">
+                💰 You Save $201 as a Coffee & AI Time Graduate!
+            </div>
+
+            <div class="benefits-list">
+                <h3>What You Get:</h3>
+                <ul>
+                    <li>Two dedicated 45-minute private coaching sessions</li>
+                    <li>Personalized guidance on YOUR specific projects and challenges</li>
+                    <li>Custom AI workflow development tailored to your business</li>
+                    <li>Technical troubleshooting and optimization</li>
+                    <li>Strategic implementation planning</li>
+                    <li>Direct access to 20 years of IT expertise</li>
+                    <li>Personalized action plan you can implement immediately</li>
+                    <li>Follow-up resources and documentation</li>
+                </ul>
+            </div>
+
+            <div class="testimonial">
+                <p style="font-size: 1.15em; line-height: 1.8;">
+                    "The master class was incredible, but the 1-on-1 coaching sessions were game-changing. We built a custom AI workflow that saves my team 15 hours every week. The ROI was immediate and the personalized attention was worth every penny."
+                </p>
+                <p class="testimonial-author">- Sarah M., Marketing Director</p>
+            </div>
+
+            <div style="background: #fff3cd; border-left: 5px solid #ffc107; padding: 20px; margin: 30px 0; border-radius: 5px;">
+                <strong>Perfect For:</strong>
+                <ul style="margin-top: 10px; margin-left: 20px;">
+                    <li>Implementing AI solutions in your specific business context</li>
+                    <li>Troubleshooting challenges you have encountered</li>
+                    <li>Scaling what you learned to your entire team</li>
+                    <li>Building custom workflows for complex processes</li>
+                    <li>Getting expert guidance on advanced use cases</li>
+                </ul>
+            </div>
+
+            <div style="background: #e8f4f8; border-left: 5px solid #17a2b8; padding: 20px; margin: 30px 0; border-radius: 5px;">
+                <strong>⏰ Limited Time Alumni Pricing</strong>
+                <p style="margin-top: 10px; font-size: 1.05em;">
+                    This special $201 discount is available exclusively for Coffee & AI Time graduates. This offer may not be available in the future, so lock in your alumni rate today!
+                </p>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <h2>Secure Your Coaching Sessions</h2>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em;">
+                Complete your purchase below and we will reach out within 24 hours to schedule your sessions at a time that works for you.
+            </p>
+
+            <div class="form-section">
+                <form id="upgradeForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address (used for master class) *</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="focusArea">What would you like to focus on in your coaching sessions?</label>
+                        <select id="focusArea">
+                            <option value="">Select a focus area...</option>
+                            <option value="workflow">Custom AI Workflow Development</option>
+                            <option value="implementation">Business Implementation Strategy</option>
+                            <option value="troubleshooting">Technical Troubleshooting</option>
+                            <option value="scaling">Scaling AI Across My Team</option>
+                            <option value="advanced">Advanced Use Cases</option>
+                            <option value="other">Other (We will discuss)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="additionalInfo">Additional Information (Optional)</label>
+                        <input type="text" id="additionalInfo" placeholder="Tell us more about what you want to accomplish...">
+                    </div>
+
+                    <div style="background: #e3f2fd; padding: 25px; border-radius: 10px; margin: 25px 0; text-align: center;">
+                        <p style="font-size: 1.2em; margin-bottom: 10px; color: #666; font-weight: 600;">Alumni Special Price:</p>
+                        <p style="font-size: 3em; font-weight: bold; color: #28a745; margin: 0;">$1,299</p>
+                        <p style="margin-top: 10px; color: #666;">Two 45-minute coaching sessions</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardName">Name on Card *</label>
+                        <input type="text" id="cardName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number *</label>
+                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date *</label>
+                            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cvv">CVV *</label>
+                            <input type="text" id="cvv" placeholder="123" maxlength="4" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="billingZip">Billing Zip Code *</label>
+                        <input type="text" id="billingZip" maxlength="10" required>
+                    </div>
+
+                    <div style="margin: 20px 0; padding: 15px; background: #e3f2fd; border-radius: 8px;">
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="checkbox" id="terms" required style="width: auto; margin-right: 10px;">
+                            <span>I agree to the terms and conditions and understand that payment is non-refundable after scheduling sessions</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        Complete Payment - $1,299
+                    </button>
+
+                    <p style="text-align: center; margin-top: 20px; color: #666; font-size: 0.95em;">
+                        🔒 Secure payment processing. Your information is protected.
+                    </p>
+                </form>
+
+                <div class="success-message" id="successMessage">
+                    <h3>Purchase Successful! 🎉</h3>
+                    <p style="font-size: 1.2em; margin-top: 15px;">
+                        Thank you for upgrading to Premium Coaching! You will receive a confirmation email within the next few minutes, and we will reach out within 24 hours to schedule your two coaching sessions.
+                    </p>
+                    <p style="margin-top: 15px;">We are excited to work with you personally!</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p style="margin-bottom: 10px; font-size: 0.95em;">© 2025 Coffee & AI Time. All Rights Reserved.</p>
+            <p style="font-size: 0.85em; opacity: 0.8;">Questions? Contact us at [Your Email]</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('cardNumber').addEventListener('input', function(e) {
+                var value = e.target.value.replace(/\s/g, '');
+                var formattedValue = value.match(/.{1,4}/g);
+                if (formattedValue) {
+                    e.target.value = formattedValue.join(' ');
+                } else {
+                    e.target.value = value;
+                }
+            });
+
+            document.getElementById('expiry').addEventListener('input', function(e) {
+                var value = e.target.value.replace(/\D/g, '');
+                if (value.length >= 2) {
+                    value = value.slice(0, 2) + '/' + value.slice(2, 4);
+                }
+                e.target.value = value;
+            });
+
+            document.getElementById('cvv').addEventListener('input', function(e) {
+                e.target.value = e.target.value.replace(/\D/g, '');
+            });
+
+            document.getElementById('upgradeForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                var email = document.getElementById('email').value;
+                var terms = document.getElementById('terms').checked;
+                
+                if (!email || !terms) {
+                    alert('Please fill in all required fields and accept the terms.');
+                    return;
+                }
+
+                var upgradeData = {
+                    name: document.getElementById('fullName').value,
+                    email: email,
+                    phone: document.getElementById('phone').value,
+                    focusArea: document.getElementById('focusArea').value,
+                    additionalInfo: document.getElementById('additionalInfo').value,
+                    amount: 1299,
+                    timestamp: new Date().toISOString()
+                };
+
+                document.querySelector('.form-section form').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+
+                console.log('Upgrade purchase submitted:', upgradeData);
+            });
+        });
+    </script>
+</body>
+</html>
